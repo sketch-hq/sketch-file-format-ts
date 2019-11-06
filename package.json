@@ -1,0 +1,61 @@
+{
+  "name": "@sketch-hq/sketch-file-format-ts",
+  "description": "TypeScript types for the Sketch File Format",
+  "version": "1.0.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": "github:sketch-hq/sketch-file-format-ts",
+  "keywords": [
+    "sketch",
+    "sketch files",
+    "file format",
+    "file spec",
+    "typescript",
+    "types"
+  ],
+  "devDependencies": {
+    "@sketch-hq/sketch-file-format-119": "npm:@sketch-hq/sketch-file-format@1.*.*",
+    "@sketch-hq/sketch-file-format-120": "npm:@sketch-hq/sketch-file-format@2.*.*",
+    "@sketch-hq/sketch-file-format-121": "npm:@sketch-hq/sketch-file-format@3.*.*",
+    "@types/humps": "1.1.2",
+    "@types/jest": "24.0.21",
+    "@types/node": "12.12.3",
+    "@types/prettier": "1.18.3",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
+    "humps": "2.0.1",
+    "husky": "3.0.9",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "standard-version": "7.0.0",
+    "ts-jest": "24.1.0",
+    "ts-node": "8.4.1",
+    "typescript": "3.7.1-rc"
+  },
+  "scripts": {
+    "generate": "ts-node ./scripts/generate.ts",
+    "build": "yarn generate && tsc",
+    "test": "jest",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
+    "format-check": "prettier --check **/*.{ts,md,json}"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn build"
+    }
+  }
+}

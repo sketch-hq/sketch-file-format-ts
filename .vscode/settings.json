@@ -1,0 +1,8 @@
+{
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.enable": false,
+  "typescript.validate.enable": true
+}
