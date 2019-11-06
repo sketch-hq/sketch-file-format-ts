@@ -315,17 +315,17 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@sketch-hq/sketch-file-format-119@npm:@sketch-hq/sketch-file-format@1.*.*":
+"@sketch-hq/sketch-file-format-1@npm:@sketch-hq/sketch-file-format@1.*.*":
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-1.1.4.tgz#0eac207a62c2a2c8067c14ee75da0ae4f8b648f6"
   integrity sha512-nLf+MMuIKJvWTgGqLSHBdsvk3zLH9YE8EAc3doSvtp8cBNmuaNr1aIBpxpf4xhtieMvKKG2Hi90x8hWSlR9Bhw==
 
-"@sketch-hq/sketch-file-format-120@npm:@sketch-hq/sketch-file-format@2.*.*":
+"@sketch-hq/sketch-file-format-2@npm:@sketch-hq/sketch-file-format@2.*.*":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.0.tgz#b79b8f0b176cbf86f233e2be222545ffae75a19c"
   integrity sha512-Ilds625MV2RkyI8JX8a0AeUJ+DE/AdQ5lv9T7DkvOnZsxuQpezLIRU5ZASsBOCH3w+fc236gAeDuaf1k6bP1fg==
 
-"@sketch-hq/sketch-file-format-121@npm:@sketch-hq/sketch-file-format@3.*.*":
+"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.*.*":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.1.0.tgz#ca58ccb3ecb8def8051a4512fcbc6ac9a03445f0"
   integrity sha512-aV/90n+mBNDpL7FEAY4KPP+uksK2wqLJaCWXIz3AeRCQnC3WoVnfAT+zkMam5LWtp0J8jaEETB9UFLQMU9iUKw==

@@ -18,9 +18,9 @@
     "types"
   ],
   "devDependencies": {
-    "@sketch-hq/sketch-file-format-119": "npm:@sketch-hq/sketch-file-format@1.*.*",
-    "@sketch-hq/sketch-file-format-120": "npm:@sketch-hq/sketch-file-format@2.*.*",
-    "@sketch-hq/sketch-file-format-121": "npm:@sketch-hq/sketch-file-format@3.*.*",
+    "@sketch-hq/sketch-file-format-1": "npm:@sketch-hq/sketch-file-format@1.*.*",
+    "@sketch-hq/sketch-file-format-2": "npm:@sketch-hq/sketch-file-format@2.*.*",
+    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.*.*",
     "@types/humps": "1.1.2",
     "@types/jest": "24.0.21",
     "@types/node": "12.12.3",
@@ -38,7 +38,7 @@
   },
   "scripts": {
     "generate": "ts-node ./scripts/generate.ts",
-    "build": "yarn generate && tsc",
+    "build": "rm -rf dist && yarn generate && tsc",
     "test": "jest",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
     "format-check": "prettier --check **/*.{ts,md,json}"

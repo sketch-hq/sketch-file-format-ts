@@ -2,10 +2,10 @@ import * as ts from 'typescript'
 import { writeFileSync } from 'fs'
 import { execSync } from 'child_process'
 // @ts-ignore
-import schemas119 from '@sketch-hq/sketch-file-format-119'
+import schemasv1 from '@sketch-hq/sketch-file-format-1'
 // @ts-ignore
-import schemas120 from '@sketch-hq/sketch-file-format-120'
-import schemas121 from '@sketch-hq/sketch-file-format-121'
+import schemasv2 from '@sketch-hq/sketch-file-format-2'
+import schemasv3 from '@sketch-hq/sketch-file-format-3'
 import { JSONSchema7 } from 'json-schema'
 import {
   schemaToTopLevelDeclaration,
@@ -90,6 +90,6 @@ const generate = (version: string, schemas: any) => {
   execSync(`yarn prettier --write ${outFile}`)
 }
 
-generate('119', schemas119)
-generate('120', schemas120)
-generate('121', schemas121)
+generate('v1', schemasv1)
+generate('v2', schemasv2)
+generate('v3', schemasv3)

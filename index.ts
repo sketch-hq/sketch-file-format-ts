@@ -1,7 +1,7 @@
-import * as FileFormat119 from './119-types'
-import * as FileFormat120 from './120-types'
-import * as FileFormat121 from './121-types'
+import * as FileFormat1 from './v1-types'
+import * as FileFormat2 from './v2-types'
+import * as FileFormat3 from './v3-types'
 
-export { FileFormat119, FileFormat120, FileFormat121 }
+export { FileFormat1, FileFormat2, FileFormat3 }
 
-export default FileFormat121
+export default FileFormat3

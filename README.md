@@ -6,7 +6,7 @@
 
 This repo contains TypeScript types automatically generated from the [Sketch File Format](https://github.com/sketch-hq/sketch-file-format) JSON Schemas.
 
-Types are exported for each Sketch document `version` starting with `119`. See usage instructions below for more information.
+Types are maintained and exported for each Sketch File Format major version. See usage instructions below for more information.
 
 ## Use cases
 
@@ -25,21 +25,23 @@ Add the npm module using `npm` or `yarn`
 npm install @sketch-hq/sketch-file-format-ts
 ```
 
-Types for the latest Sketch document `version` are on the default export
+Types for the latest file format are on the default export
 
 ```typescript
 import FileFormat from '@sketch-hq/sketch-file-format'
 ```
 
-Types for historical Sketch document versions are accessible via named exports
+Types for historical file formats are accessible via named exports
 
 ```typescript
 import {
-  FileFormat119,
-  FileFormat120,
-  FileFormat121,
+  FileFormat1,
+  FileFormat2,
+  FileFormat3,
 } from '@sketch-hq/sketch-file-format'
 ```
+
+> Read about how file format versions map to Sketch document versions [here](https://github.com/sketch-hq/sketch-file-format#sketch-document-version-mapping)
 
 ## Examples
 
@@ -80,19 +82,19 @@ Work with representations of Sketch files that could have a range of document ve
 
 ```typescript
 import {
-  FileFormat119,
-  FileFormat120,
-  FileFormat121,
+  FileFormat1,
+  FileFormat2,
+  FileFormat3,
 } from '@sketch-hq/sketch-file-format'
 
 const processDocumentContents = (
   contents:
-    | FileFormat121.FileFormat
-    | FileFormat120.FileFormat
-    | FileFormat119.FileFormat,
+    | FileFormat1.FileFormat
+    | FileFormat2.FileFormat
+    | FileFormat3.FileFormat,
 ) => {
   if (contents.meta.version === 119) {
-    // type narrowed to documents with version 119
+    // type narrowed to file format v1, i.e. Sketch documents with version 119
   } else {
     // type narrowed to a union of document versions 120 and 121
   }
