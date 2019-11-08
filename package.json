@@ -18,6 +18,8 @@
     "types"
   ],
   "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
     "@sketch-hq/sketch-file-format-1": "npm:@sketch-hq/sketch-file-format@1.*.*",
     "@sketch-hq/sketch-file-format-2": "npm:@sketch-hq/sketch-file-format@2.*.*",
     "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.*.*",
@@ -41,7 +43,8 @@
     "build": "rm -rf dist && yarn generate && tsc",
     "test": "jest",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
-    "format-check": "prettier --check **/*.{ts,md,json}"
+    "format-check": "prettier --check **/*.{ts,md,json}",
+    "commitlint": "commitlint --from HEAD~1 --to HEAD --verbose"
   },
   "config": {
     "commitizen": {
