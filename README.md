@@ -70,9 +70,9 @@ const mapLayers = (layers: FileFormat.AnyLayer[]) => {
   return layers.map(layer => {
     switch (layer._class) {
       case 'bitmap':
-      // layer type narrows to Bitmap
+      // type narrowed to Bitmap
       case 'star':
-      // layer type narrowed to Star
+      // type narrowed to Star
     }
   })
 }
@@ -88,10 +88,7 @@ import {
 } from '@sketch-hq/sketch-file-format'
 
 const processDocumentContents = (
-  contents:
-    | FileFormat1.FileFormat
-    | FileFormat2.FileFormat
-    | FileFormat3.FileFormat,
+  contents: FileFormat1.Contents | FileFormat2.Contents | FileFormat3.Contents,
 ) => {
   if (contents.meta.version === 119) {
     // type narrowed to file format v1, i.e. Sketch documents with version 119
