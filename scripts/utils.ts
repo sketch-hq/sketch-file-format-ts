@@ -49,17 +49,18 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
         const additionalProps =
           typeof schema.additionalProperties === 'undefined' ||
           !!schema.additionalProperties
-        const elements: ts.TypeElement[] = Object.keys(schema.properties).map(
-          key =>
-            ts.createPropertySignature(
-              undefined,
-              ts.createIdentifier(key),
-              required.includes(key)
-                ? undefined
-                : ts.createToken(ts.SyntaxKind.QuestionToken),
-              schemaToTypeNode(schema.properties![key] as JSONSchema7),
-              undefined,
-            ),
+        const elements: ts.TypeElement[] = Object.keys(
+          schema.properties,
+        ).map(key =>
+          ts.createPropertySignature(
+            undefined,
+            ts.createIdentifier(key),
+            required.includes(key)
+              ? undefined
+              : ts.createToken(ts.SyntaxKind.QuestionToken),
+            schemaToTypeNode(schema.properties![key] as JSONSchema7),
+            undefined,
+          ),
         )
         if (additionalProps) {
           elements.push(
@@ -199,4 +200,11 @@ export const isGroupSchema = (schema: JSONSchema7) => {
   const hasLayers =
     schema.properties && typeof schema.properties.layers === 'object'
   return isLayer && hasLayers
+}
+
+/**
+ * Does the schema represent an object/class in the model?
+ */
+export const isObjectSchema = (schema: JSONSchema7) => {
+  return schema.properties && '_class' in schema.properties
 }
