@@ -11,6 +11,7 @@ import {
   schemaToTopLevelDeclaration,
   isLayerSchema,
   isGroupSchema,
+  isObjectSchema,
 } from './utils'
 
 type SchemaMap = {
@@ -58,17 +59,29 @@ const generate = (version: string, schemas: any) => {
       })),
   }
 
+  const anyObject: JSONSchema7 = {
+    description: 'Union of all objects, i.e. objects with a _class property',
+    $id: '#AnyObject',
+    oneOf: Object.keys(definitions)
+      .map(key => definitions[key])
+      .filter(schema => isObjectSchema(schema))
+      .map(schema => ({
+        $ref: schema.$id,
+      })),
+  }
+
   const allDefinitions: SchemaMap = {
     ...definitions,
     FileFormat: fileFormat,
     Document: document,
     AnyLayer: anyLayer,
     AnyGroup: anyGroup,
+    AnyObject: anyObject,
   }
 
-  const types: ts.DeclarationStatement[] = Object.keys(allDefinitions).map(
-    key => schemaToTopLevelDeclaration(allDefinitions[key]),
-  )
+  const types: ts.DeclarationStatement[] = Object.keys(
+    allDefinitions,
+  ).map(key => schemaToTopLevelDeclaration(allDefinitions[key]))
 
   writeFileSync(
     outFile,
