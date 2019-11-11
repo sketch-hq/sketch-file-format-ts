@@ -27,9 +27,9 @@ const generate = (version: string, schemas: any) => {
     ...((schemas.user.definitions as SchemaMap) || {}),
   }
 
-  const fileFormat: JSONSchema7 = {
+  const contents: JSONSchema7 = {
     ...schemas.fileFormat,
-    $id: '#FileFormat',
+    $id: '#Contents',
   }
 
   const document: JSONSchema7 = {
@@ -72,7 +72,7 @@ const generate = (version: string, schemas: any) => {
 
   const allDefinitions: SchemaMap = {
     ...definitions,
-    FileFormat: fileFormat,
+    Contents: contents,
     Document: document,
     AnyLayer: anyLayer,
     AnyGroup: anyGroup,
