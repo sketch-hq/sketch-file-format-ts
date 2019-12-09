@@ -425,20 +425,20 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@sketch-hq/sketch-file-format-1@npm:@sketch-hq/sketch-file-format@1.*.*":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-1.1.4.tgz#0eac207a62c2a2c8067c14ee75da0ae4f8b648f6"
-  integrity sha512-nLf+MMuIKJvWTgGqLSHBdsvk3zLH9YE8EAc3doSvtp8cBNmuaNr1aIBpxpf4xhtieMvKKG2Hi90x8hWSlR9Bhw==
+"@sketch-hq/sketch-file-format-1@npm:@sketch-hq/sketch-file-format@1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-1.1.6.tgz#79392d0a981032d124f8484f4d2bf16f0fb00a6a"
+  integrity sha512-Udyc+hOtsgvB2D9hIW+nIlw5k72LQgaS+Y+h/CA4c+Zo5TnP8L5x1qBw4vOgy4U7wWWRU5jDwZa0oUxnXQCH3w==
 
-"@sketch-hq/sketch-file-format-2@npm:@sketch-hq/sketch-file-format@2.*.*":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.0.tgz#b79b8f0b176cbf86f233e2be222545ffae75a19c"
-  integrity sha512-Ilds625MV2RkyI8JX8a0AeUJ+DE/AdQ5lv9T7DkvOnZsxuQpezLIRU5ZASsBOCH3w+fc236gAeDuaf1k6bP1fg==
+"@sketch-hq/sketch-file-format-2@npm:@sketch-hq/sketch-file-format@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.2.tgz#3e5edfaf57cacf22f298c4b1dc23b918ece5abb5"
+  integrity sha512-O4XkpwdP4es5NO/BarlO41ZZyzyMypyTF0xW6ikmH5DfSjSswMowRK6Y+IFD+GhYuA5tHuN2u48TIqrwlovESA==
 
-"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.2.0.tgz#fbb8f4ce49b5d50ebd810a10f68587c47826853f"
-  integrity sha512-3RO5JgvfnjIcsF5vnnokqNHrLNgyDpp16Bf14ZUBDVSyHMfAtdP/AE7d8Yw7zmfEaHBQ9rGWBmNFAIID8Zq+/Q==
+"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.2.1.tgz#927a585fbc2eaac4ee68a0111edcd3167398fd0c"
+  integrity sha512-pII0hA45nqrkTYgOdMzfVi1GpNvZV+AHfvys0847rcb7b9DdBLAZhS5RiZRNtiy58WbG3L9S5qZwPrwAzSVzXw==
   dependencies:
     "@types/json-schema" "7.0.3"
 
