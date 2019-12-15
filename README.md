@@ -28,7 +28,7 @@ npm install @sketch-hq/sketch-file-format-ts
 Types for the latest file format are on the default export
 
 ```typescript
-import FileFormat from '@sketch-hq/sketch-file-format'
+import FileFormat from '@sketch-hq/sketch-file-format-ts'
 ```
 
 Types for historical file formats are accessible via named exports
@@ -38,7 +38,7 @@ import {
   FileFormat1,
   FileFormat2,
   FileFormat3,
-} from '@sketch-hq/sketch-file-format'
+} from '@sketch-hq/sketch-file-format-ts'
 ```
 
 > Read about how file format versions map to Sketch document versions [here](https://github.com/sketch-hq/sketch-file-format#sketch-document-version-mapping)
@@ -48,7 +48,7 @@ import {
 Create a typed layer blur object
 
 ```typescript
-import FileFormat from '@sketch-hq/sketch-file-format'
+import FileFormat from '@sketch-hq/sketch-file-format-ts'
 
 const blur: FileFormat.Blur = {
   _class: 'blur',
@@ -64,7 +64,7 @@ const blur: FileFormat.Blur = {
 Layer types can be narrowed using discriminated unions
 
 ```typescript
-import FileFormat from '@sketch-hq/sketch-file-format'
+import FileFormat from '@sketch-hq/sketch-file-format-ts'
 
 const mapLayers = (layers: FileFormat.AnyLayer[]) => {
   return layers.map(layer => {
@@ -85,7 +85,7 @@ import {
   FileFormat1,
   FileFormat2,
   FileFormat3,
-} from '@sketch-hq/sketch-file-format'
+} from '@sketch-hq/sketch-file-format-ts'
 
 const processDocumentContents = (
   contents: FileFormat1.Contents | FileFormat2.Contents | FileFormat3.Contents,
