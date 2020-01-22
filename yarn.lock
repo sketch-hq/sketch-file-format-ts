@@ -435,10 +435,10 @@
   resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.2.tgz#3e5edfaf57cacf22f298c4b1dc23b918ece5abb5"
   integrity sha512-O4XkpwdP4es5NO/BarlO41ZZyzyMypyTF0xW6ikmH5DfSjSswMowRK6Y+IFD+GhYuA5tHuN2u48TIqrwlovESA==
 
-"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.2.1.tgz#927a585fbc2eaac4ee68a0111edcd3167398fd0c"
-  integrity sha512-pII0hA45nqrkTYgOdMzfVi1GpNvZV+AHfvys0847rcb7b9DdBLAZhS5RiZRNtiy58WbG3L9S5qZwPrwAzSVzXw==
+"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.3.0.tgz#1e5491647a207d3e3339e09d41d2f032efef3687"
+  integrity sha512-79nrfcHEYXdiB+2bLl2bTgwdNtwxJ4xFghWbBoSKPcy81HzRz9sChigT0HUuWLSk6C8V5m2mETIm0gZqn2/Zqw==
   dependencies:
     "@types/json-schema" "7.0.3"
 

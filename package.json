@@ -22,7 +22,7 @@
     "@commitlint/config-conventional": "8.2.0",
     "@sketch-hq/sketch-file-format-1": "npm:@sketch-hq/sketch-file-format@1.1.6",
     "@sketch-hq/sketch-file-format-2": "npm:@sketch-hq/sketch-file-format@2.0.2",
-    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.2.1",
+    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.3.0",
     "@types/humps": "1.1.2",
     "@types/jest": "24.0.22",
     "@types/node": "12.12.7",
