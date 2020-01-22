@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/sketch-hq/sketch-file-format-ts/compare/v4.0.0...v4.0.1) (2020-01-22)
+
 ## [4.0.0](https://github.com/sketch-hq/sketch-file-format-ts/compare/v3.0.0...v4.0.0) (2019-12-09)
 
 ## [3.0.0](https://github.com/sketch-hq/sketch-file-format-ts/compare/v1.0.0...v3.0.0) (2019-11-15)
