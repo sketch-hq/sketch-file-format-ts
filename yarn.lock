@@ -425,20 +425,20 @@
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
-"@sketch-hq/sketch-file-format-1@npm:@sketch-hq/sketch-file-format@1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-1.1.6.tgz#79392d0a981032d124f8484f4d2bf16f0fb00a6a"
-  integrity sha512-Udyc+hOtsgvB2D9hIW+nIlw5k72LQgaS+Y+h/CA4c+Zo5TnP8L5x1qBw4vOgy4U7wWWRU5jDwZa0oUxnXQCH3w==
+"@sketch-hq/sketch-file-format-1@npm:@sketch-hq/sketch-file-format@1.1.7":
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-1.1.7.tgz#7de3cdfda10c97d21bbe261e0544ca581d27366e"
+  integrity sha512-tEQxuWgXIFn2fNgAiGDszrEGF/sR16O2kOjkB49PJcI7NWq+rwghr6Fx6nSL8dPNXOpYeSQOHGqTvGlVuo9YEA==
 
-"@sketch-hq/sketch-file-format-2@npm:@sketch-hq/sketch-file-format@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.2.tgz#3e5edfaf57cacf22f298c4b1dc23b918ece5abb5"
-  integrity sha512-O4XkpwdP4es5NO/BarlO41ZZyzyMypyTF0xW6ikmH5DfSjSswMowRK6Y+IFD+GhYuA5tHuN2u48TIqrwlovESA==
+"@sketch-hq/sketch-file-format-2@npm:@sketch-hq/sketch-file-format@2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-2.0.3.tgz#ed3077b6e146c947b4fe144ef0cacfc67b7e507e"
+  integrity sha512-l/sLUhHayJEair70vQEGBAldpR3K8Xb+WqZGlrVtJT3aZVGGnEAT8i8n8qNMECWBdEojTxC3gKqgiJu9U98nDw==
 
-"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.3.0.tgz#1e5491647a207d3e3339e09d41d2f032efef3687"
-  integrity sha512-79nrfcHEYXdiB+2bLl2bTgwdNtwxJ4xFghWbBoSKPcy81HzRz9sChigT0HUuWLSk6C8V5m2mETIm0gZqn2/Zqw==
+"@sketch-hq/sketch-file-format-3@npm:@sketch-hq/sketch-file-format@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@sketch-hq/sketch-file-format/-/sketch-file-format-3.4.2.tgz#6d9f35c73e243f2e73e9fe58c47f4176f4d60972"
+  integrity sha512-3+2P67pCGJruUZWKur4Rau0Xb/znxsYGBbxaiuTM0b1PCx4h89Aprwc4ypdhblYwFcwu7HFn4NF5ScbKGe7fwg==
   dependencies:
     "@types/json-schema" "7.0.3"
 

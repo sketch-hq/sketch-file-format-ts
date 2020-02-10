@@ -120,7 +120,9 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
         )
       } else if (schema.$ref) {
         return ts.createTypeReferenceNode(
-          ts.createIdentifier(schema.$ref.replace(/#/, '')),
+          ts.createIdentifier(
+            schema.$ref.replace(/#/, '').replace(/\/definitions\//, ''),
+          ),
           undefined,
         )
       } else if (schema.oneOf) {
