@@ -18,22 +18,20 @@
     "types"
   ],
   "devDependencies": {
+    "@changesets/cli": "2.5.1",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
+    "@commitlint/prompt-cli": "8.3.5",
     "@sketch-hq/sketch-file-format-1": "npm:@sketch-hq/sketch-file-format@1.1.7",
     "@sketch-hq/sketch-file-format-2": "npm:@sketch-hq/sketch-file-format@2.0.3",
-    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.4.2",
+    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.4.3",
     "@types/humps": "1.1.2",
     "@types/jest": "24.0.22",
     "@types/node": "12.12.7",
     "@types/prettier": "1.18.3",
-    "commitizen": "4.0.3",
-    "cz-conventional-changelog": "3.0.2",
     "humps": "2.0.1",
-    "husky": "3.0.9",
     "jest": "24.9.0",
     "prettier": "1.19.1",
-    "standard-version": "7.0.0",
     "ts-jest": "24.1.0",
     "ts-node": "8.5.0",
     "typescript": "3.7.2"
@@ -43,22 +41,6 @@
     "build": "rm -rf dist && yarn generate && tsc",
     "test": "jest",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
-    "format-check": "prettier --check **/*.{ts,md,json}",
-    "commitlint": "commitlint --from HEAD~1 --to HEAD --verbose"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
-  "standard-version": {
-    "scripts": {
-      "prerelease": "yarn build"
-    }
+    "format-check": "prettier --check {**/,}*.{ts,md,json}"
   }
 }
