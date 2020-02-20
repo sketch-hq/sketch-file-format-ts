@@ -13,7 +13,7 @@ jobs:
       - node/with-cache:
           cache-key: yarn.lock
           steps:
-            - run: yarn install --frozen-lockfile --offline
+            - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: yarn test
       - run: yarn format-check
