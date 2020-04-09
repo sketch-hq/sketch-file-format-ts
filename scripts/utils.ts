@@ -13,7 +13,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
     case 'string':
       if (schema.enum) {
         return ts.createUnionTypeNode(
-          schema.enum.map(value =>
+          schema.enum.map((value) =>
             ts.createLiteralTypeNode(ts.createLiteral(value as string)),
           ),
         )
@@ -24,7 +24,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
     case 'integer':
       if (schema.enum) {
         return ts.createUnionTypeNode(
-          schema.enum.map(value =>
+          schema.enum.map((value) =>
             ts.createLiteralTypeNode(ts.createLiteral(value as number)),
           ),
         )
@@ -34,7 +34,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
     case 'boolean':
       if (schema.enum) {
         return ts.createUnionTypeNode(
-          schema.enum.map(value =>
+          schema.enum.map((value) =>
             ts.createLiteralTypeNode(ts.createLiteral(value as boolean)),
           ),
         )
@@ -51,7 +51,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
           !!schema.additionalProperties
         const elements: ts.TypeElement[] = Object.keys(
           schema.properties,
-        ).map(key =>
+        ).map((key) =>
           ts.createPropertySignature(
             undefined,
             ts.createIdentifier(key),
@@ -98,7 +98,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
               ),
             ],
             ts.createUnionTypeNode(
-              Object.keys(schema.patternProperties).map(key =>
+              Object.keys(schema.patternProperties).map((key) =>
                 schemaToTypeNode(schema.patternProperties![key] as JSONSchema7),
               ),
             ),
@@ -127,7 +127,7 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
         )
       } else if (schema.oneOf) {
         return ts.createUnionTypeNode(
-          schema.oneOf.map(schema => schemaToTypeNode(schema as JSONSchema7)),
+          schema.oneOf.map((schema) => schemaToTypeNode(schema as JSONSchema7)),
         )
       } else {
         return ts.createTypeLiteralNode(undefined)

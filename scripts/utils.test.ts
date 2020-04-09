@@ -296,7 +296,7 @@ describe('schemaToTopLevelDeclaration', () => {
       export enum MyEnum {
         Zero = 0,
         One = 1,
-        Two = 2
+        Two = 2,
       }"
     `)
   })

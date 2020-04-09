@@ -41,9 +41,9 @@ const generate = (version: string, schemas: any) => {
     description: 'Union of all layers',
     $id: '#AnyLayer',
     oneOf: Object.keys(definitions)
-      .map(key => definitions[key])
-      .filter(schema => isLayerSchema(schema))
-      .map(schema => ({
+      .map((key) => definitions[key])
+      .filter((schema) => isLayerSchema(schema))
+      .map((schema) => ({
         $ref: schema.$id,
       })),
   }
@@ -52,9 +52,9 @@ const generate = (version: string, schemas: any) => {
     description: 'Union of all group layers',
     $id: '#AnyGroup',
     oneOf: Object.keys(definitions)
-      .map(key => definitions[key])
-      .filter(schema => isGroupSchema(schema))
-      .map(schema => ({
+      .map((key) => definitions[key])
+      .filter((schema) => isGroupSchema(schema))
+      .map((schema) => ({
         $ref: schema.$id,
       })),
   }
@@ -63,9 +63,9 @@ const generate = (version: string, schemas: any) => {
     description: 'Union of all objects, i.e. objects with a _class property',
     $id: '#AnyObject',
     oneOf: Object.keys(definitions)
-      .map(key => definitions[key])
-      .filter(schema => isObjectSchema(schema))
-      .map(schema => ({
+      .map((key) => definitions[key])
+      .filter((schema) => isObjectSchema(schema))
+      .map((schema) => ({
         $ref: schema.$id,
       })),
   }
@@ -81,7 +81,7 @@ const generate = (version: string, schemas: any) => {
 
   const types: ts.DeclarationStatement[] = Object.keys(
     allDefinitions,
-  ).map(key => schemaToTopLevelDeclaration(allDefinitions[key]))
+  ).map((key) => schemaToTopLevelDeclaration(allDefinitions[key]))
 
   writeFileSync(
     outFile,

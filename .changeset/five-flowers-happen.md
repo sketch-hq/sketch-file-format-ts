@@ -2,4 +2,4 @@
 '@sketch-hq/sketch-file-format-ts': patch
 ---
 
-add changesets
+Update to file format `3.5.3`
