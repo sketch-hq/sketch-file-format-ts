@@ -6,7 +6,9 @@
     "noUnusedParameters": true,
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "target": "ES6",
+    "moduleResolution": "node"
   },
   "include": ["index.ts"],
   "exclude": ["node_modules", "dist"]
