@@ -70,6 +70,30 @@ const generate = (version: string, schemas: any) => {
       })),
   }
 
+  const allClasses: string[] = [
+    ...new Set(
+      Object.keys(definitions)
+        .map((key) => definitions[key])
+        .map((schema) => {
+          const klass = schema?.properties?._class
+          return typeof klass === 'object' && 'const' in klass
+            ? (klass.const as string)
+            : ''
+        })
+        .filter(Boolean)
+        .sort(),
+    ),
+  ]
+
+  const classValues: JSONSchema7 = {
+    description: 'Enum of all possible _class property values',
+    $id: '#ClassValue',
+    type: 'string',
+    enum: allClasses,
+    // @ts-ignore
+    enumDescriptions: allClasses,
+  }
+
   const allDefinitions: SchemaMap = {
     ...definitions,
     Contents: contents,
@@ -77,6 +101,7 @@ const generate = (version: string, schemas: any) => {
     AnyLayer: anyLayer,
     AnyGroup: anyGroup,
     AnyObject: anyObject,
+    ClassValue: classValues,
   }
 
   const types: ts.DeclarationStatement[] = Object.keys(
