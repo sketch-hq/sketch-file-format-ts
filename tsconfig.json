@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "outDir": "dist",
     "target": "ES6",
+    "module": "CommonJS",
     "moduleResolution": "node"
   },
   "include": ["index.ts"],
