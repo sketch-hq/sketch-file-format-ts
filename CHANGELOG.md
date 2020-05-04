@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-file-format-ts
 
+## 4.0.5
+
+### Patch Changes
+
+- c0292ca: Fix problem where package was being built as ESM.
+
 ## 4.0.4
 
 ### Patch Changes
