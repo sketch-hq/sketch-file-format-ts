@@ -54,7 +54,9 @@ export const schemaToTypeNode = (schema: JSONSchema7): ts.TypeNode => {
         ).map((key) =>
           ts.createPropertySignature(
             undefined,
-            ts.createIdentifier(key),
+            key.includes('-')
+              ? ts.createStringLiteral(key)
+              : ts.createIdentifier(key),
             required.includes(key)
               ? undefined
               : ts.createToken(ts.SyntaxKind.QuestionToken),
