@@ -1,5 +1,16 @@
 # @sketch-hq/sketch-file-format-ts
 
+## 5.0.0
+
+### Major Changes
+
+- 8c997ce: Update to Sketch File Format `3.6.1`
+
+### Minor Changes
+
+- 8c997ce: Add `ClassMap` a type that maps `_class` strings to their object
+  type.
+
 ## 4.0.5
 
 ### Patch Changes
