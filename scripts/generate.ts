@@ -94,6 +94,30 @@ const generate = (version: string, schemas: any) => {
     enumDescriptions: allClasses,
   }
 
+  const classMap: JSONSchema7 = {
+    description: 'A mapping of class values to object types',
+    $id: '#ClassMap',
+    type: 'object',
+    additionalProperties: false,
+    required: allClasses,
+    properties: allClasses.reduce((acc, curr) => {
+      const schema = Object.keys(definitions)
+        .map((key) => definitions[key])
+        .find((schema) => {
+          const klass = schema?.properties?._class
+          return (
+            typeof klass === 'object' &&
+            'const' in klass &&
+            (klass.const as string) === curr
+          )
+        })
+      return {
+        [curr]: (schema && { $ref: schema.$id }) || {},
+        ...acc,
+      }
+    }, {}),
+  }
+
   const allDefinitions: SchemaMap = {
     ...definitions,
     Contents: contents,
@@ -102,6 +126,7 @@ const generate = (version: string, schemas: any) => {
     AnyGroup: anyGroup,
     AnyObject: anyObject,
     ClassValue: classValues,
+    ClassMap: classMap,
   }
 
   const types: ts.DeclarationStatement[] = Object.keys(
