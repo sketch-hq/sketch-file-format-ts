@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-file-format-ts
 
+## 5.1.0
+
+### Minor Changes
+
+- 1aff125: Include ESM entrypoint.
+
 ## 5.0.0
 
 ### Major Changes
