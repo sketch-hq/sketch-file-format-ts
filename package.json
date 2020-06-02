@@ -2,8 +2,9 @@
   "name": "@sketch-hq/sketch-file-format-ts",
   "description": "TypeScript types for the Sketch File Format",
   "version": "5.0.0",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "dist/cjs/index",
+  "types": "dist/cjs/index",
+  "module": "dist/esm/index",
   "license": "MIT",
   "files": ["dist"],
   "repository": "github:sketch-hq/sketch-file-format-ts",
@@ -33,7 +34,7 @@
   },
   "scripts": {
     "generate": "ts-node ./scripts/generate.ts",
-    "build": "rm -rf dist && yarn generate && tsc",
+    "build": "rm -rf dist && yarn generate && tsc --project tsconfig.json && tsc --project tsconfig.esm.json",
     "test": "jest",
     "release": "yarn build && changeset publish",
     "format-check": "prettier --check {**/,}*.{ts,md,json}"

@@ -6,7 +6,7 @@
     "noUnusedParameters": true,
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "dist",
+    "outDir": "dist/cjs",
     "target": "ES6",
     "module": "CommonJS",
     "moduleResolution": "node"
