@@ -1,14 +1,12 @@
 {
   "name": "@sketch-hq/sketch-file-format-ts",
   "description": "TypeScript types for the Sketch File Format",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "main": "dist/cjs/index",
   "types": "dist/cjs/index",
   "module": "dist/esm/index",
   "license": "MIT",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "repository": "github:sketch-hq/sketch-file-format-ts",
   "keywords": [
     "sketch",
