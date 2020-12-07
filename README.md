@@ -137,7 +137,7 @@ convention when writing commit messages.
 1. Determine the semver bump type and call yarn changeset to create an intent to
    release your changes (read more about changesets
    [here](https://github.com/atlassian/changesets)).
-1. Open a PR to `master`
+1. Open a PR to `main`
 
 #### Adding or updating a file format version
 
@@ -147,7 +147,7 @@ convention when writing commit messages.
 1. If the schema version is new to the repo you'll also need to update the
    `index.ts` to export the types, and `scripts/generate.ts` to generate the new
    types
-1. Open a PR to `master`
+1. Open a PR to `main`
 
 #### Release
 
