@@ -1,5 +1,11 @@
 # @sketch-hq/sketch-file-format-ts
 
+## 5.2.1
+
+### Patch Changes
+
+- 3a2a6ea: Update sketch-file-format to 3.7.1
+
 ## 5.2.0
 
 ### Minor Changes
