@@ -20,7 +20,7 @@
     "@changesets/cli": "2.12.0",
     "@sketch-hq/sketch-file-format-1": "npm:@sketch-hq/sketch-file-format@1.1.7",
     "@sketch-hq/sketch-file-format-2": "npm:@sketch-hq/sketch-file-format@2.0.3",
-    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.7.1",
+    "@sketch-hq/sketch-file-format-3": "npm:@sketch-hq/sketch-file-format@3.7.2",
     "@types/humps": "2.0.0",
     "@types/jest": "26.0.16",
     "@types/node": "14.14.10",
