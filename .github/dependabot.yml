@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - directory: /
+    open-pull-requests-limit: 5
+    package-ecosystem: npm
+    rebase-strategy: auto
+    schedule:
+      timezone: 05:00 UTC
+    versioning-strategy: increase
+    allow:
+      # Update Sketch file format JSON only
+      - dependency-name: "@sketch-hq/sketch-file-format*"
+    labels:
+      - "dependencies"
