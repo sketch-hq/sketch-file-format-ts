@@ -2,7 +2,7 @@
 
 > ⚠️ **This repository has been merged into the [`sketch-document`](https://github.com/sketch-hq/sketch-document) monorepo which contains both JSON Schema and TypeScript types. The latest npm package is published to [`@sketch-hq/sketch-file-format-ts`](https://www.npmjs.com/package/@sketch-hq/sketch-file-format-ts)** 
 
-> TypeScript types for the Sketch File Format
+TypeScript types for the Sketch File Format
 
 ## Overview
 
